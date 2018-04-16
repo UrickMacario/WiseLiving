@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import { Carousel } from 'react-responsive-carousel';
 
-import exampleImg from '../img/amenidades_galeria_edit.jpg';
+import exampleImg from '../img/amenidades2.jpg';
+import exampleImg2 from '../img/amenidades1.jpg';
+import exampleImg3 from '../img/amenidades3.jpg';
 
 export default class Ammenities extends Component {
     render(){
@@ -23,10 +25,10 @@ export default class Ammenities extends Component {
                             <img src={exampleImg} alt=""/>
                         </div>
                         <div className="Carousel-single">
-                            <img src={exampleImg} alt=""/>
+                            <img src={exampleImg2} alt=""/>
                         </div>
                         <div className="Carousel-single">
-                            <img src={exampleImg} alt=""/>
+                            <img src={exampleImg3} alt=""/>
                         </div>
                     </Carousel>
                 </div>

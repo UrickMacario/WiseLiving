@@ -1,9 +1,18 @@
 import React, {Component} from 'react';
 import { Carousel } from 'react-responsive-carousel';
 
-import twoRoomsImg from '../img/2_recamaras.png';
-import threeRoomsImg from '../img/3_recamaras.png';
-import exampleImg from '../img/galeria.jpg';
+import twoRoomsImg from '../img/departamento_de_2_recamaras.png';
+import threeRoomsImg from '../img/departamento_de_3_recamaras.png';
+import exampleImg from '../img/departamento_2recamaras_galeria.jpg';
+import exampleImg2 from '../img/departamento_2recamaras_galeria2.jpg';
+import exampleImg3 from '../img/departamento_2recamaras_galeria3.jpg';
+import exampleImg4 from '../img/departamento_2recamaras_galeria4.jpg';
+import exampleImg5 from '../img/departamento_3recamaras_galeria1.jpg';
+import exampleImg6 from '../img/departamento_3recamaras_galeria2.jpg';
+import exampleImg7 from '../img/departamento_3recamaras_galeria3.jpg';
+import exampleImg8 from '../img/departamento_3recamaras_galeria4.jpg';
+import exampleImg9 from '../img/departamento_3recamaras_galeria5.jpg';
+
 
 export default class Apartments extends Component {
     render(){
@@ -26,10 +35,13 @@ export default class Apartments extends Component {
                                 <img src={exampleImg} alt=""/>
                             </div>
                             <div className="Carousel-single">
-                                <img src={exampleImg} alt=""/>
+                                <img src={exampleImg2} alt=""/>
                             </div>
                             <div className="Carousel-single">
-                                <img src={exampleImg} alt=""/>
+                                <img src={exampleImg3} alt=""/>
+                            </div>
+                            <div className="Carousel-single">
+                                <img src={exampleImg4} alt=""/>
                             </div>
                         </Carousel>
                         </div>
@@ -46,13 +58,19 @@ export default class Apartments extends Component {
                         <div className="Apartments-single-views-right">
                         <Carousel showArrows={false} showStatus={false} showThumbs={false}>
                             <div className="Carousel-single">
-                                <img src={exampleImg} alt=""/>
+                                <img src={exampleImg7} alt=""/>
                             </div>
                             <div className="Carousel-single">
-                                <img src={exampleImg} alt=""/>
+                                <img src={exampleImg6} alt=""/>
                             </div>
                             <div className="Carousel-single">
-                                <img src={exampleImg} alt=""/>
+                                <img src={exampleImg5} alt=""/>
+                            </div>
+                            <div className="Carousel-single">
+                                <img src={exampleImg8} alt=""/>
+                            </div>
+                            <div className="Carousel-single">
+                                <img src={exampleImg9} alt=""/>
                             </div>
                         </Carousel>
                         </div>
