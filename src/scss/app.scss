@@ -1,0 +1,462 @@
+//Import
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,500,700');
+
+//Variables
+$grey: #5b5854;
+$white: #fff;
+$lightgrey: #eae9e3;
+$mianText: #5b5854;
+
+//Base Screen -> 1440 x 800
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Ubuntu', sans-serif;
+    background: $lightgrey;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+//Helpers
+.Button {
+    font-size: 1.6rem;
+    font-weight: 300;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: $grey;
+    color: $white;
+}
+
+.Notice {
+    height: 8vh;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: $white;
+    background: $grey;
+}
+
+.MainBanner {
+    width: 100%;
+
+    & .carousel .slide .legend {
+        position: relative;
+        width: 50%;
+        left: -50%;
+        margin-left: -45%;
+        font-size: 1.9rem;
+        font-weight: 300;
+        border-radius: 0;
+        opacity: 1;
+        background: $lightgrey;
+        color: $mianText;
+    }
+
+    & .carousel .control-dots .dot {
+        box-shadow: none;
+        background: transparent;
+        border-radius: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $grey;
+
+        &:hover, &.selected {
+            background: $grey;
+        }
+    }
+
+    & .carousel .control-dots {
+        bottom: 15vh;
+    }
+}
+
+.Carousel {
+    &-single {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.Navigation {
+    width: 100vw;
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 11vh;
+    z-index: 1000;
+
+    &-logo {
+        width: 11vw;
+        height: 25vh;
+        background: $grey;
+    }
+
+    &-contact {
+        width: 15vw;
+    }
+}
+
+.Contact {
+    width: 100vw;
+    padding: 13vh 5vw;
+
+    &-title {
+        font-size: 3.2rem;
+        font-weight: 300;
+        text-align: center;
+        padding-bottom: 10vh;
+        color: $mianText;
+    }
+
+    &-form {
+        display: flex;
+        align-items: flex-start;
+
+        &-left {
+            flex-basis: 40%;
+            padding-right: 25%;
+        }
+
+        &-right {
+            flex-basis: 60%;
+        }
+
+        &-select {
+            margin-bottom: 14vh;
+        }
+
+        &-label {
+            font-size: 1.6rem;
+            font-weight: 500;
+            padding-bottom: 2vh;
+            display: block;
+            color: $mianText;
+        }
+
+        &-customSelect {
+            border: 0;
+            width: 100%;
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: $mianText;
+            background: $white;
+        }
+
+        &-input {
+            &-base {
+                width: 100%;
+                font-size: 1.4rem;
+                padding: 3vh 2vw; 
+                border: 1px solid $grey;
+                background: transparent;
+            }
+
+            &-small {
+                width: 45%;
+            }
+
+            &-textarea {
+                height: 25vh;
+            }
+        }
+
+        &-inputGroup {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 3vh 0;
+        }
+
+        &-submit {
+            margin-top: 3vh;
+            width: 100%;
+        }
+    }
+}
+
+.Apartments {
+    &-title {
+        margin-bottom: 1vh;
+
+        &-highlight {
+            font-size: 2rem;
+            font-weight: 300;
+            padding: 2vh 5vw;
+            position: absolute;
+            left: 0;
+            background: $grey;
+            color: $white;
+        }
+
+        &-normal {
+            font-size: 1.6rem;
+            font-weight: 500;
+            letter-spacing: 1.5;
+            letter-spacing: 2px;
+            text-align: center;
+            display: block;
+            padding: 2vh 0;
+            color: $mianText;
+        }
+    }
+
+    &-single {
+        margin: 10vh 0;
+
+        &-details {
+            font-size: 1.6rem;
+            font-weight: 300;
+            padding-left: 5vw;
+            color: $mianText;
+
+            &-highlight {
+                font-weight: 500;
+            }
+        }
+
+        &-views {
+            margin-top: 10vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+            &-left {
+                flex-basis: 50%;
+                padding-left: 5vw;
+
+                & img {
+                    max-width: 75%;
+                    display: block;
+                    margin: auto;
+                }
+            }
+
+            &-right {
+                flex-basis: 50%;
+                min-height: 70vh;
+            }
+
+            &--reverse {
+                & .Apartments-single-views-left {
+                    order: 2;
+                }
+
+                & .Apartments-single-views-right {
+                    order: 1;
+                }
+            }
+        }
+    }
+
+    & .carousel .control-dots .dot {
+        box-shadow: none;
+        background: transparent;
+        border-radius: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $grey;
+
+        &:hover, &.selected {
+            background: $grey;
+        }
+    }
+
+    & .carousel .control-dots {
+        bottom: 1vh;
+        padding-left: 1vw;
+        text-align: left;
+    }
+
+    & .Carousel-single {
+        height: 70vh;
+    }
+
+    & .carousel .slide img {
+        align-self: stretch;
+    }
+}
+
+.Location{
+    background: $white;
+    padding: 10vh 0 0;
+
+    &-header {
+        display: flex;
+        align-items: flex-start;
+    
+        &-left {
+            flex-basis: 30%;
+        }
+    
+        &-right {
+            flex-basis: 70%;
+        }
+    
+        &-title {
+            font-size: 2rem;
+            font-weight: 300;
+            padding: 1vh 0 1vh 5vw;
+            width: 70%;
+            max-width: 300px;
+            color: $mianText;
+            background: $lightgrey;
+        }
+    
+        &-address {
+            font-size: 1.6rem;
+            font-weight: 300;
+            padding: 4vh 5vw 0;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            color: $mianText;
+        }
+    
+        &-text {
+            font-size: 1.6rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 2.5;
+            padding-right: 5vw;
+            color: $mianText;
+        }
+    }
+
+    &-map {
+        margin-top: 10vh;
+    }
+}
+
+.Ammenities {
+    background: $white;
+    padding: 10vh 0;
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+
+    &-left {
+        flex-basis: 50%;
+    }
+
+    &-right {
+        flex-basis: 50%;
+    }
+
+    &-title {
+        font-size: 2rem;
+        font-weight: 300;
+        padding: 1vh 0 1vh 5vw;
+        width: 70%;
+        max-width: 300px;
+        margin-bottom: 10vh;
+        color: $mianText;
+        background: $lightgrey;
+    }
+
+    &-text {
+        font-size: 1.6rem;
+        font-weight: 300;
+        padding-left: 5vw;
+        margin-bottom: 5vh;
+        color: $mianText;
+    }
+
+    &-list {
+        font-size: 1.6rem;
+        font-weight: 300;
+        padding-left: 5vw;
+        list-style: inside;
+        line-height: 2;
+        color: $mianText;
+    }
+
+    & .carousel .control-dots .dot {
+        box-shadow: none;
+        background: transparent;
+        border-radius: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $white;
+        opacity: 1;
+
+        &:hover, &.selected {
+            background: $white;
+        }
+    }
+
+    & .carousel .control-dots {
+        bottom: 1vh;
+        padding-left: 1vw;
+        text-align: left;
+    }
+}
+
+.Footer {
+    padding: 17vh 5vw;
+
+    &-title {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 17vh;
+        color: $mianText;
+
+        & span {
+            font-weight: 500;
+        }
+    }
+
+    &-info {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 300;
+        text-align: center;
+
+        &-social {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            &-single {
+                font-size: 2.5rem;
+            }
+        }
+
+        &-info {
+            flex-grow: 3;
+            text-align: left;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        &-mail {
+            flex-grow: 2;
+        }
+    }
+}
