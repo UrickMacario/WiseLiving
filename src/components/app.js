@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import img from '../favicon.png';
 
 import Notice from './notice';
 import Navigation from './navigation';

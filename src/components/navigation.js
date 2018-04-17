@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
+import {Link} from 'react-router-dom';
 
 import logo from '../img/logo.png';
 
 export default class Navigation extends Component {
 
-    onScrollToContact(e){
+    onScrollToContact(){
         const target = $('[data-section=contact]');
         const distance = target.offset().top;
 
@@ -17,9 +18,9 @@ export default class Navigation extends Component {
     render(){
         return(
             <nav className="Navigation">
-                <div className="Navigation-logo">
+                <Link to="/" className="Navigation-logo">
                     <img src={logo} alt="Wise Living Cañada"/>
-                </div>
+                </Link>
                 <button className="Button Navigation-contact" onClick={this.onScrollToContact}>Contacto</button>
             </nav>
         );

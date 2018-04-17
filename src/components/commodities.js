@@ -20,7 +20,7 @@ export default class Ammenities extends Component {
                     </ul>
                 </div>
                 <div className="Ammenities-right">
-                    <Carousel showArrows={false} showStatus={false} showThumbs={false}>
+                    <Carousel showArrows={false} showStatus={false} showThumbs={false} autoPlay={true} interval={5000} infiniteLoop={true}>
                         <div className="Carousel-single">
                             <img src={exampleImg} alt=""/>
                         </div>

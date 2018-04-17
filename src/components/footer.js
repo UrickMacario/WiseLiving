@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 export default class Footer extends Component {
     render(){
@@ -14,9 +15,9 @@ export default class Footer extends Component {
                     <div className="Footer-info-info">
                     <a href="tel:+524422946060">(442) 294 6060</a>
                     <span>|</span>
-                    <a href="#">Aviso de privacidad</a>
+                    <Link to="/aviso-de-privacidad">Aviso de privacidad</Link>
                     <span>|</span>
-                    <a href="#">Preguntas frecuentes</a>
+                    <Link to="/aviso-de-privacidad">Preguntas Frecuentes</Link>
                     </div>
                     <div className="Footer-info-mail">
                         <a href="mailto:contacto@wiseliving.com.mx">contacto@wiseliving.com.mx</a>

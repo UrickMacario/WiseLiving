@@ -30,7 +30,7 @@ export default class Apartments extends Component {
                             <img src={twoRoomsImg} alt=""/>
                         </div>
                         <div className="Apartments-single-views-right">
-                        <Carousel showArrows={false} showStatus={false} showThumbs={false}>
+                        <Carousel showArrows={false} showStatus={false} showThumbs={false} autoPlay={true} infiniteLoop={true}>
                             <div className="Carousel-single">
                                 <img src={exampleImg} alt=""/>
                             </div>
@@ -56,7 +56,7 @@ export default class Apartments extends Component {
                             <img src={threeRoomsImg} alt=""/>
                         </div>
                         <div className="Apartments-single-views-right">
-                        <Carousel showArrows={false} showStatus={false} showThumbs={false}>
+                        <Carousel showArrows={false} showStatus={false} showThumbs={false} autoPlay={true} infiniteLoop={true}>
                             <div className="Carousel-single">
                                 <img src={exampleImg7} alt=""/>
                             </div>

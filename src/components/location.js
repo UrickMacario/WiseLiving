@@ -16,7 +16,7 @@ export default class Location extends Component {
                 </div>
                 <div className="Location-map">
                     <Map isMarkerShown
-  googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+  googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAGX_KmY-Ykn0S9zopxqKdSJT2htEfh54M"
   loadingElement={<div style={{ height: `100%` }} />}
   containerElement={<div style={{ height: `400px` }} />}
   mapElement={<div style={{ height: `100%` }} />}/>

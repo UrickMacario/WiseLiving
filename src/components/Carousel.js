@@ -9,7 +9,7 @@ import exampleImg3 from '../img/departamentosWiseLiving.jpg';
 
 export default class MainBanner extends Component {
 
-    onScrollToContact(e){
+    onScrollToContact(){
         const target = $('[data-section=contact]');
         const distance = target.offset().top;
 
@@ -21,7 +21,7 @@ export default class MainBanner extends Component {
     render(){
         return(
             <div className={this.props.reference}>
-                <Carousel showArrows={false} showStatus={false} showThumbs={false}>
+                <Carousel showArrows={false} showStatus={false} showThumbs={false} autoPlay={true} interval={5000} infiniteLoop={true}>
                     <div className="Carousel-single">
                         <img src={exampleImg2} alt=""/>
                         <p className="legend">Un concepto de vida integral en un espacio vanguardista.</p>
