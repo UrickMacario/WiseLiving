@@ -3,6 +3,7 @@
 
 //Variables
 $grey: #5b5854;
+$greyShadow: #2A2827;
 $white: #fff;
 $lightgrey: #eae9e3;
 $mianText: #5b5854;
@@ -43,8 +44,14 @@ a {
     align-items: center;
     justify-content: center;
     border: 0;
+    transition: .3s ease;
+    cursor: pointer;
     background: $grey;
     color: $white;
+
+    &:hover {
+        box-shadow: 2px 2px 2px 2px $greyShadow inset;
+    }
 }
 
 .Notice {
@@ -60,6 +67,7 @@ a {
 
 .MainBanner {
     width: 100%;
+    position: relative;
 
     & .carousel .slide .legend {
       position: relative;
@@ -94,6 +102,15 @@ a {
     & .carousel .control-dots {
         bottom: 15vh;
     }
+
+    & .fa-sort-down {
+        position: absolute;
+        bottom: 2vh;
+        left: 50vw;
+        font-size: 5rem;
+        cursor: pointer;
+        color: $grey;
+    }
 }
 
 .Carousel {
@@ -109,7 +126,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     top: 11vh;
     z-index: 1000;
 

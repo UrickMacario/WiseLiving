@@ -8,7 +8,7 @@ export default class Contact extends Component {
 
     render(){
         return(
-            <section className="Contact">
+            <section className="Contact" data-section="contact">
                 <h2 className="Contact-title">Me interesa conocer más de Wise Living, quiero que me contacte un asesor.</h2>
                 <form action="#" className="Contact-form">
                     <div className="Contact-form-left">

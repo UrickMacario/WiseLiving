@@ -8,7 +8,7 @@ import exampleImg3 from '../img/amenidades3.jpg';
 export default class Ammenities extends Component {
     render(){
         return(
-            <secrtion className="Ammenities">
+            <section className="Ammenities">
                 <div className="Ammenities-left">
                     <h2 className="Ammenities-title">Amenidades</h2>
                     <p className="Ammenities-text">Wise Living cuenta con amenidades de primer nivel:</p>
@@ -32,7 +32,7 @@ export default class Ammenities extends Component {
                         </div>
                     </Carousel>
                 </div>
-            </secrtion>
+            </section>
         );
     }
 }
