@@ -436,13 +436,11 @@ a {
 }
 
 .Footer {
-    padding: 13vh 5vw;
-
     &-title {
         font-size: 3rem;
         font-weight: 300;
         text-align: center;
-        margin-bottom: 17vh;
+        padding: 13vh;
         color: $mianText;
 
         & span {
@@ -456,6 +454,8 @@ a {
         font-size: 2rem;
         font-weight: 300;
         text-align: center;
+        background: $white;
+        padding: 10vh 5vw;
 
         &-social {
             flex-grow: 1;
