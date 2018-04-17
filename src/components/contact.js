@@ -9,10 +9,19 @@ class Contact extends Component {
         super(props);
         this.onSubmitContact = this.onSubmitContact.bind(this);
     }
+
+    onSubmitCRM(json, history){
+        $.post('/contact/insert.php', json, function(res){
+            console.log(res);
+        }).done(function(){
+            history.push('/gracias');
+        });
+    }
     
     onSubmitContact(e){
         e.preventDefault();
         const history = this.props.history;
+        const $this = this;
         const json = {};
         const form = document.querySelector('[data-form=contact]');
         const data = Array.prototype.slice.call(form.querySelectorAll('[data-input]'));
@@ -27,7 +36,7 @@ class Contact extends Component {
         $.post('/contact/send_contact.php', json, function(res){
             console.log(res);
         }).done(function(){
-            history.push('/gracias');
+            $this.onSubmitCRM(json, history);
         });
     }
 
