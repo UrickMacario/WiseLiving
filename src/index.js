@@ -7,12 +7,14 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import App from './components/app';
 import Aviso from './components/aviso_privacidad/aviso';
+import Thanks from './components/thanks/thank_you';
 
 ReactDOM.render(
     <BrowserRouter>
         <div>
             <Switch>
                 <Route path="/aviso-de-privacidad" component={Aviso} />
+                <Route path="/gracias" component={Thanks} />
                 <Route path="/" component={App} />
             </Switch>
         </div>

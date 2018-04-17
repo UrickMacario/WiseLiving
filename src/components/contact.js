@@ -1,15 +1,23 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
+import {withRouter} from 'react-router-dom';
 
-export default class Contact extends Component {
+class Contact extends Component {
+
+    constructor(props){
+        super(props);
+        this.onSubmitContact = this.onSubmitContact.bind(this);
+    }
     
     onSubmitContact(e){
         e.preventDefault();
+        const history = this.props.history;
         const json = {};
         const form = document.querySelector('[data-form=contact]');
         const data = Array.prototype.slice.call(form.querySelectorAll('[data-input]'));
 
-        const values = data.map( single => {
+        data.map( single => {
             const key = single.dataset.title;
             const value = single.value;
 
@@ -18,6 +26,8 @@ export default class Contact extends Component {
 
         $.post('/contact/send_contact.php', json, function(res){
             console.log(res);
+        }).done(function(){
+            history.push('/gracias');
         });
     }
 
@@ -58,3 +68,9 @@ export default class Contact extends Component {
         );
     }
 }
+
+Contact.propTypes = {
+    history: PropTypes.object
+};
+
+export default withRouter(Contact);
