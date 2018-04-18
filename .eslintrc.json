@@ -26,6 +26,7 @@
             "always"
         ],
         "no-unused-vars": "warn",
-        "no-console": "warn"
+        "no-console": "warn",
+        "no-unreachable": "warn"
     }
 }

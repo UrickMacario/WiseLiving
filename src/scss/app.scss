@@ -221,6 +221,10 @@ a {
             padding-bottom: 2vh;
             display: block;
             color: $mianText;
+
+            &.input-error {
+                color: red;
+            }
         }
 
         &-customSelect {
@@ -239,6 +243,14 @@ a {
                 padding: 3vh 2vw;
                 border: 1px solid $grey;
                 background: transparent;
+
+                &.input-error {
+                    border: 1px solid red;
+                }
+
+                &:focus {
+                    outline: none;
+                }
             }
 
             &-small {
@@ -271,6 +283,11 @@ a {
         &-submit {
             margin-top: 3vh;
             width: 100%;
+
+            &:disabled {
+                background: #ccc;
+                box-shadow: none;
+            }
         }
     }
 }
