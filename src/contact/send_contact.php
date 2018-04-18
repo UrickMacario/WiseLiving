@@ -35,7 +35,7 @@ try {
 
     //Recipients
     $mail->setFrom($clientMail, $name);
-    $mail->addAddress('rogelio@rogfed.ninja', 'Wise Living');     // Add a recipient
+    $mail->addAddress('contacto@wiseliving.com.mx', 'Wise Living');     // Add a recipient
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
