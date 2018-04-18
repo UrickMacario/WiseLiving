@@ -1,11 +1,11 @@
 <?php 
 
-$type = $_POST['tipoDepartamentos'];
-$where = $_POST['dondeEncontraste'];
-$name = $_POST['nombre'];
-$phone = $_POST['telefono'];
-$clientMail = $_POST['mail'];
-$message = $_POST['mensaje'];
+$type = filter_var($_POST['tipoDepartamentos'], FILTER_SANITIZE_STRING);
+$where = filter_var($_POST['dondeEncontraste'], FILTER_SANITIZE_STRING);
+$name = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
+$phone = filter_var($_POST['telefono'], FILTER_SANITIZE_INT);
+$clientMail = filter_var($_POST['mail'], FILTER_SANITIZE_EMAIL);
+$message = filter_var($_POST['mensaje'], FILTER_SANITIZE_STRING);
 
 $fullMessage = <<<HTML
 Nombre: $name<br/>
