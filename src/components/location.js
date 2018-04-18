@@ -11,7 +11,7 @@ export default class Location extends Component {
                         <p className="Location-header-address">Anillo Vial Fray Junipero Sierra 22650, Juriquilla, Querétaro.</p>
                     </div>
                     <div className="Location-header-right">
-                        <p className="Location-header-text">Con una ubicación privilegiada, a tan sólo 20 minutos de la ciudad de Querétaro, en la exclusiva zona de Juriquilla, el desarrollo residencial asegura la plusvalía de inversión con una infraestructuraurbana sólida que integra funcionalidad, comodidad y facilidad de acceso.</p>
+                        <p className="Location-header-text">Con una ubicación privilegiada, a tan sólo 20 minutos del centro de Querétaro, en la exclusiva zona de Juriquilla, el desarrollo residencial asegura la plusvalía de inversión con una infraestructura urbana sólida que integra funcionalidad, comodidad y facilidad de acceso.</p>
                     </div>
                 </div>
                 <div className="Location-map">
