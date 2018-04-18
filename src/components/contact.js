@@ -99,7 +99,8 @@ class Contact extends Component {
             dondeEncontraste: this.state.dondeEncontraste,
             nombre: this.state.nombre,
             telefono: this.state.telefono,
-            mail: this.state.mail
+            mail: this.state.mail,
+            mensaje: this.state.mensaje
         };
 
         const errors = document.querySelectorAll('.input-error');
@@ -110,7 +111,6 @@ class Contact extends Component {
             }, 3000 );
             return;
         }
-
 
         $.post('/contact/send_contact.php', json, function(res){
             console.log(res);
@@ -123,7 +123,7 @@ class Contact extends Component {
         return(
             <section className="Contact" data-section="contact">
                 <h2 className="Contact-title">Me interesa conocer más de Wise Living, quiero que me contacte un asesor.</h2>
-                <form action="#" className="Contact-form" data-form="contact">
+                <form className="Contact-form" data-form="contact" onSubmit={this.onSubmitContact}>
                     <div className="Contact-form-left">
                         <div className="Contact-form-select">
                             <label htmlFor="tipoDepartamentos" className="Contact-form-label">Tipo de departamento</label>
@@ -151,7 +151,7 @@ class Contact extends Component {
                             <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Mail" data-input data-title="mail" onChange={this.onValueUpdate} value={this.state.mail}/>
                         </div>
                         <textarea className="Contact-form-input-base Contact-form-input-textarea" name="" id="" placeholder="Mensaje" data-input data-title="mensaje" onChange={this.onValueUpdate} value={this.state.mensaje}></textarea>
-                        <button className="Button Contact-form-submit" data-submit onClick={this.onSubmitContact} disabled>Enviar</button>
+                        <button className="Button Contact-form-submit" data-submit disabled>Enviar</button>
                     </div>
                 </form>
             </section>

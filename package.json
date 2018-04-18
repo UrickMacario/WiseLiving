@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "rm -rf dist/ && webpack-dev-server --mode=development",
-    "start:prod": "rm -rf dist/ && webpack -p && cp -R src/contact dist/contact"
+    "start:prod": "rm -rf dist/ && webpack -p && cp -R src/contact dist/contact && cp -R vendor/ dist/vendor"
   },
   "author": "@RogFed",
   "license": "ISC",
