@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 class Contact extends Component {
 
@@ -9,6 +10,7 @@ class Contact extends Component {
         super(props);
         this.onSubmitContact = this.onSubmitContact.bind(this);
         this.onValueUpdate = this.onValueUpdate.bind(this);
+        this.onRecaptcha = this.onRecaptcha.bind(this);
 
         this.state = {
             tipoDepartamentos: '',
@@ -17,14 +19,13 @@ class Contact extends Component {
             telefono: '',
             mail: '',
             mensaje: '',
+            ready: false
         };
     }
 
     onValueUpdate(e){
         const value = e.target.value;
         const stateKey = e.target.dataset.title;
-
-        document.querySelector('.Contact-form-submit').removeAttribute('disabled');
 
         if(stateKey === 'tipoDepartamentos'){
             this.setState({ tipoDepartamentos: value });
@@ -112,6 +113,14 @@ class Contact extends Component {
             return;
         }
 
+        if(!this.state.ready){
+            document.querySelector('.Contact-form-submit').innerHTML = 'Sabemos que no eres un bot, activa el reCAPTCHA.';
+            setTimeout( () => {
+                document.querySelector('.Contact-form-submit').innerHTML = 'Enviar';
+            }, 3000 );
+            return;
+        }
+
         $.post('/contact/send_contact.php', json, function(res){
             console.log(res);
         }).done(function(){
@@ -119,9 +128,15 @@ class Contact extends Component {
         });
     }
 
+    onRecaptcha(){
+        this.setState({ready: true});
+
+        document.querySelector('.Contact-form-submit').removeAttribute('disabled');
+    }
+
     render(){
         return(
-            <section className="Contact" data-section="contact">
+            <section className="Contact" data-section="contact"> 
                 <h2 className="Contact-title">Me interesa conocer más de Wise Living, quiero que me contacte un asesor.</h2>
                 <form className="Contact-form" data-form="contact" onSubmit={this.onSubmitContact}>
                     <div className="Contact-form-left">
@@ -151,6 +166,9 @@ class Contact extends Component {
                             <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Mail" data-input data-title="mail" onChange={this.onValueUpdate} value={this.state.mail}/>
                         </div>
                         <textarea className="Contact-form-input-base Contact-form-input-textarea" name="" id="" placeholder="Mensaje" data-input data-title="mensaje" onChange={this.onValueUpdate} value={this.state.mensaje}></textarea>
+                        <div className="Contact-recaptcha">
+                            <ReCAPTCHA sitekey="6Ld6JVQUAAAAAHafmP-RCQwVN0GBiUz36FgblSFb" onChange={this.onRecaptcha}  />
+                        </div>
                         <button className="Button Contact-form-submit" data-submit disabled>Enviar</button>
                     </div>
                 </form>

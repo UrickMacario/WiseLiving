@@ -281,7 +281,6 @@ a {
         }
 
         &-submit {
-            margin-top: 3vh;
             width: 100%;
 
             &:disabled {
@@ -289,6 +288,10 @@ a {
                 box-shadow: none;
             }
         }
+    }
+
+    &-recaptcha {
+        margin: 3vh 0;
     }
 }
 
