@@ -16,7 +16,6 @@ export default class App extends Component {
                 <Notice />
                 <Navigation />
                 <MainBanner reference="MainBanner"/>
-                <Contact />
                 <Apartments />
                 <Location />
                 <Ammenities />
