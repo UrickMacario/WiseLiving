@@ -72,6 +72,7 @@ a {
 .MainBanner {
     width: 100%;
     position: relative;
+    overflow: hidden;
 
     @media screen and (max-width: 800px){
         max-height: 110vh;
@@ -85,8 +86,6 @@ a {
     }
 
     & .carousel {
-        height: 115vh;
-
         & .slider-wrapper {
             height: 100%;
         }
