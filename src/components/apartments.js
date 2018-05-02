@@ -17,7 +17,7 @@ import exampleImg9 from '../img/departamento_3recamaras_galeria5.jpg';
 export default class Apartments extends Component {
     render(){
         return(
-            <section className="Apartments">
+            <section className="Apartments" data-section="apartments">
                 <h2 className="Apartments-title">
                     <span className="Apartments-title-highlight">Departamentos</span><span className="Apartments-title-normal">Wise Living cuenta con dos tipos de departamentos en venta:</span>
                 </h2>

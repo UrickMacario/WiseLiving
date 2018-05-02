@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Notice from './notice';
 import Navigation from './navigation';
 import MainBanner from './Carousel';
-import Contact from './contact';
 import Apartments from './apartments';
 import Location from './location';
 import Ammenities from './commodities';
