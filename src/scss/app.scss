@@ -225,17 +225,18 @@ a {
 
         @media screen and (max-width: 480px){
             font-size: 2.5rem;
-            text-align: right;
+            text-align: left;
+            padding-left: 25vw;
         }
 
         @media screen and (max-width: 380px){
             font-size: 2rem;
-            padding-left: 10vw;
         }
 
         @media screen and (max-width: 320px){
             font-size: 2rem;
-            padding-left: 20vw;
+            padding-left: 30vw;
+            padding-bottom: 10vh;
         }
     }
 
