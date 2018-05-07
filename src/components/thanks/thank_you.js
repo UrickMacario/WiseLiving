@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 import Navigation from '../navigation';
-import Footer from '../footer';
 
 import exampleImg from '../../img/Wise Living Cañada 404.jpg';
 

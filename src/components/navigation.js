@@ -21,7 +21,8 @@ export default class Navigation extends Component {
                 <Link to="/" className="Navigation-logo">
                     <img src={logo} alt="Wise Living Cañada"/>
                 </Link>
-                <button className="Button Navigation-contact" onClick={this.onScrollToContact}>Contacto</button>
+                {/* TODO: Remove commented button once approved */}
+                {/* <button className="Button Navigation-contact" onClick={this.onScrollToContact}>Contacto</button> */}
             </nav>
         );
     }
