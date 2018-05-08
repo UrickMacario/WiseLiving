@@ -90,7 +90,7 @@ class Contact extends Component {
             history.push('/gracias');
         });
     }
-    
+
     onSubmitContact(e){
         e.preventDefault();
         const history = this.props.history;
@@ -136,7 +136,7 @@ class Contact extends Component {
 
     render(){
         return(
-            <section className="Contact" data-section="contact"> 
+            <section className="Contact" data-section="contact">
                 <h2 className="Contact-title">Quiero que me contacte un asesor.</h2>
                 <form className="Contact-form" data-form="contact" onSubmit={this.onSubmitContact}>
                     <div className="Contact-form-left">
