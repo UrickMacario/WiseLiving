@@ -74,7 +74,7 @@ a {
     position: relative;
     overflow: hidden;
 
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 1024px){
         max-height: 110vh;
         overflow: hidden;
     }
@@ -222,6 +222,10 @@ a {
         text-align: center;
         padding-bottom: 8vh;
         color: $mianText;
+
+        @media screen and (max-width: 1024px){
+            padding-bottom: 4vh;
+        }
 
         @media screen and (max-width: 480px){
             font-size: 2.5rem;

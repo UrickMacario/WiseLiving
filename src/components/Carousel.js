@@ -67,7 +67,7 @@ export default class MainBanner extends Component {
     onWindowResize(){
         const windowSize = window.innerWidth;
 
-        if(windowSize <= 800){
+        if(windowSize <= 1024){
             carouselImg = respImg;
             carouselImg2 = respImg2;
             carouselImg3 = respImg3;
@@ -98,11 +98,6 @@ export default class MainBanner extends Component {
                         <p className="legend">Un concepto de vida integral en un espacio vanguardista.</p>
                     </div>
                 </Carousel>
-                {/* TODO: Remove HTML element after confirmation */}
-                {/* <span onClick={this.onScrollToContact}>
-                    <i className="fas fa-sort-down"></i>
-                </span> */}
-                <button className="Button MainBanner-button" onClick={this.onScrollToApartments}>conoce más</button>
                 <Contact />
             </div>
         );
