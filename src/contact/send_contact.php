@@ -5,8 +5,6 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php';
 
-$type = filter_var($_POST['tipoDepartamentos'], FILTER_SANITIZE_STRING);
-$where = filter_var($_POST['dondeEncontraste'], FILTER_SANITIZE_STRING);
 $name = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
 $phone = filter_var($_POST['telefono'], FILTER_SANITIZE_STRING);
 $clientMail = filter_var($_POST['mail'], FILTER_SANITIZE_EMAIL);
@@ -14,8 +12,6 @@ $message = filter_var($_POST['mensaje'], FILTER_SANITIZE_STRING);
 
 $fullMessage = <<<HTML
 Nombre: $name<br/>
-Tipo de Departamento: $type recamaras<br/>
-Donde nos Conociste: $where<br/>
 Teléfono: $phone<br/>
 Email: $clientMail<br/>
 Mensaje: $message<br/>

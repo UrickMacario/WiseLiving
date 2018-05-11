@@ -13,8 +13,6 @@ class Contact extends Component {
         this.onRecaptcha = this.onRecaptcha.bind(this);
 
         this.state = {
-            tipoDepartamentos: '',
-            dondeEncontraste: '',
             nombre: '',
             telefono: '',
             mail: '',
@@ -26,24 +24,6 @@ class Contact extends Component {
     onValueUpdate(e){
         const value = e.target.value;
         const stateKey = e.target.dataset.title;
-
-        if(stateKey === 'tipoDepartamentos'){
-            this.setState({ tipoDepartamentos: value });
-            if(!value){
-                document.querySelector('[for=tipoDepartamentos]').classList.add('input-error');
-            }else{
-                document.querySelector('[for=tipoDepartamentos]').classList.remove('input-error');
-            }
-        }
-
-        if(stateKey === 'dondeEncontraste'){
-            this.setState({ dondeEncontraste: value });
-            if(!value){
-                document.querySelector('[for=dondeEncontraste]').classList.add('input-error');
-            }else{
-                document.querySelector('[for=dondeEncontraste]').classList.remove('input-error');
-            }
-        }
 
         if(stateKey === 'nombre'){
             this.setState({ nombre: value });
@@ -96,8 +76,6 @@ class Contact extends Component {
         const history = this.props.history;
         const $this = this;
         const json = {
-            tipoDepartamentos: this.state.tipoDepartamentos,
-            dondeEncontraste: this.state.dondeEncontraste,
             nombre: this.state.nombre,
             telefono: this.state.telefono,
             mail: this.state.mail,
@@ -139,26 +117,6 @@ class Contact extends Component {
             <section className="Contact" data-section="contact"> 
                 <h2 className="Contact-title">Quiero que me contacte un asesor.</h2>
                 <form className="Contact-form" data-form="contact" onSubmit={this.onSubmitContact}>
-                    <div className="Contact-form-left">
-                        <div className="Contact-form-select">
-                            <label htmlFor="tipoDepartamentos" className="Contact-form-label">Tipo de departamento</label>
-                            <select  className="Contact-form-customSelect" name="tipoDepartamentos" id="tipoDepartamentos" data-input data-title="tipoDepartamentos" onChange={this.onValueUpdate} value={this.state.tipoDepartamentos}>
-                                <option value="2">2 recámaras</option>
-                                <option value="3">3 recámaras</option>
-                                <option value="">Selecciona una opción</option>
-                            </select>
-                        </div>
-                        <div className="Contact-form-select">
-                            <label htmlFor="dondeEncontraste" className="Contact-form-label">¿Donde nos encontraste?</label>
-                            <select className="Contact-form-customSelect" name="dondeEncontraste" id="" data-input data-title="dondeEncontraste" onChange={this.onValueUpdate} value={this.state.dondeEncontraste}>
-                                <option value="redes sociales">Redes sociales</option>
-                                <option value="internet">Internet</option>
-                                <option value="boca en boca">Boca en boca</option>
-                                <option value="otros">Otros</option>
-                                <option value="">Selecciona una opción</option>
-                            </select>
-                        </div>
-                    </div>
                     <div className="Contact-form-right">
                         <input type="text" className="Contact-form-input-base Contact-form-input-full" placeholder="Nombre completo" data-input data-title="nombre" onChange={this.onValueUpdate} value={this.state.nombre}/>
                         <div className="Contact-form-inputGroup">
