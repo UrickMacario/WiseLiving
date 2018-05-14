@@ -13,10 +13,12 @@ export default class Ammenities extends Component {
                     <h2 className="Ammenities-title">Amenidades</h2>
                     <p className="Ammenities-text">Wise Living cuenta con amenidades de primer nivel:</p>
                     <ul className="Ammenities-list">
-                        <li>Seguridad 24/7</li>
-                        <li>Bodega</li>
-                        <li>Gimnasio con vapor</li>
+                        <li>Gimnasio completamente equipado</li>
+                        <li>Baño con vapor</li>
                         <li>Cancha de pádel</li>
+                        <li>Juegos infantiles</li>
+                        <li>Asadores</li>
+                        <li>Alberca con chapoteadero</li>
                     </ul>
                 </div>
                 <div className="Ammenities-right">
