@@ -187,7 +187,7 @@ a {
     justify-content: space-between;
     position: absolute;
     top: 11vh;
-    z-index: 1000;
+    z-index: 1;
 
     &-logo {
         width: 11vw;
@@ -210,6 +210,7 @@ a {
     max-height: 100%;
     height: 100%;
     overflow: scroll;
+    z-index: 2;
 
     @media screen and (max-width: 480px){
         width: 100%;
