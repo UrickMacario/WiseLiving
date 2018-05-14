@@ -36,12 +36,6 @@ class Contact extends Component {
 
         if(stateKey === 'telefono'){
             this.setState({ telefono: value });
-            var isnum = /^\d+$/.test(value);
-            if(!isnum && value){
-                document.querySelector('[data-title=telefono]').classList.add('input-error');
-            }else{
-                document.querySelector('[data-title=telefono]').classList.remove('input-error');
-            }
         }
 
         if(stateKey === 'mail'){
