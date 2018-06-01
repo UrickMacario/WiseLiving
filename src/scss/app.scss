@@ -202,7 +202,7 @@ a {
 
 .Contact {
     width: 50vw;
-    padding: 5vh 5vw;
+    padding: 2vh 5vw;
     position: absolute;
     top: 0;
     right: 0;
@@ -309,6 +309,9 @@ a {
                 padding: 2vh 2vw;
                 border: 1px solid $grey;
                 background: transparent;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: 400;
+                color: $mianText;
 
                 &.input-error {
                     border: 1px solid red;

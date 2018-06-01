@@ -9,11 +9,14 @@ $name = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
 $phone = filter_var($_POST['telefono'], FILTER_SANITIZE_STRING);
 $clientMail = filter_var($_POST['mail'], FILTER_SANITIZE_EMAIL);
 $message = filter_var($_POST['mensaje'], FILTER_SANITIZE_STRING);
+$time = filter_var($_POST['time'], FILTER_SANITIZE_STRING);
+$date = filter_var($_POST['date'], FILTER_SANITIZE_STRING);
 
 $fullMessage = <<<HTML
 Nombre: $name<br/>
 Teléfono: $phone<br/>
 Email: $clientMail<br/>
+Fecha y Hora de contacto: $date - $time<br/>
 Mensaje: $message<br/>
 HTML;
 

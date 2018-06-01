@@ -17,6 +17,9 @@ class Contact extends Component {
             telefono: '',
             mail: '',
             mensaje: '',
+            time: '',
+            date: '',
+            captcha: false,
             ready: false
         };
     }
@@ -36,6 +39,11 @@ class Contact extends Component {
 
         if(stateKey === 'telefono'){
             this.setState({ telefono: value });
+            if(!value){
+                document.querySelector('[data-title=telefono]').classList.add('input-error');
+            }else{
+                document.querySelector('[data-title=telefono]').classList.remove('input-error');
+            }
         }
 
         if(stateKey === 'mail'){
@@ -55,6 +63,30 @@ class Contact extends Component {
                 document.querySelector('[data-title=mensaje]').classList.remove('input-error');
             }
         }
+
+        if(stateKey === 'time'){
+            this.setState({ time: value });
+            if(!value){
+                document.querySelector('[data-title=time]').classList.add('input-error');
+            }else{
+                document.querySelector('[data-title=time]').classList.remove('input-error');
+            }
+        }
+
+        if(stateKey === 'date'){
+            this.setState({ date: value });
+            if(!value){
+                document.querySelector('[data-title=date]').classList.add('input-error');
+            }else{
+                document.querySelector('[data-title=date]').classList.remove('input-error');
+            }
+        }
+
+        if(this.state.nombre && this.state.mail && this.state.mensaje && this.state.time && this.state.date){
+            this.setState({
+                ready: true
+            });
+        }
     }
 
     onSubmitCRM(json, history){
@@ -73,7 +105,9 @@ class Contact extends Component {
             nombre: this.state.nombre,
             telefono: this.state.telefono,
             mail: this.state.mail,
-            mensaje: this.state.mensaje
+            mensaje: this.state.mensaje,
+            time: this.state.time,
+            date: this.state.date
         };
 
         const errors = document.querySelectorAll('.input-error');
@@ -85,11 +119,16 @@ class Contact extends Component {
             return;
         }
 
-        if(!this.state.ready){
+        if(!this.state.captcha){
             document.querySelector('.Contact-form-submit').innerHTML = 'Sabemos que no eres un bot, activa el reCAPTCHA.';
             setTimeout( () => {
                 document.querySelector('.Contact-form-submit').innerHTML = 'Enviar';
             }, 3000 );
+            return;
+        }
+
+        if(!this.state.ready){
+            document.querySelector('.Contact-form-submit').innerHTML = 'Algunos campos importantes están vacios.';
             return;
         }
 
@@ -101,7 +140,7 @@ class Contact extends Component {
     }
 
     onRecaptcha(){
-        this.setState({ready: true});
+        this.setState({captcha: true});
 
         document.querySelector('.Contact-form-submit').removeAttribute('disabled');
     }
@@ -116,6 +155,10 @@ class Contact extends Component {
                         <div className="Contact-form-inputGroup">
                             <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Teléfono" data-input data-title="telefono" onChange={this.onValueUpdate} value={this.state.telefono}/>
                             <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Mail" data-input data-title="mail" onChange={this.onValueUpdate} value={this.state.mail}/>
+                        </div>
+                        <div className="Contact-form-inputGroup">
+                            <input type="time" name="" className="Contact-form-input-base Contact-form-input-small" placeholder="Horario para contactarte" value={this.state.time} onChange={this.onValueUpdate} data-title="time"/>
+                            <input type="date" name="" className="Contact-form-input-base Contact-form-input-small" placeholder="Fecha para contactarte" value={this.state.date} onChange={this.onValueUpdate} data-title="date"/>
                         </div>
                         <textarea className="Contact-form-input-base Contact-form-input-textarea" name="" id="" placeholder="Mensaje" data-input data-title="mensaje" onChange={this.onValueUpdate} value={this.state.mensaje}></textarea>
                         <div className="Contact-recaptcha">
