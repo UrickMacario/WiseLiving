@@ -157,8 +157,9 @@ class Contact extends Component {
                             <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Mail" data-input data-title="mail" onChange={this.onValueUpdate} value={this.state.mail}/>
                         </div>
                         <div className="Contact-form-inputGroup">
-                            <input type="time" name="" className="Contact-form-input-base Contact-form-input-small" placeholder="Horario para contactarte" value={this.state.time} onChange={this.onValueUpdate} data-title="time"/>
-                            <input type="date" name="" className="Contact-form-input-base Contact-form-input-small" placeholder="Fecha para contactarte" value={this.state.date} onChange={this.onValueUpdate} data-title="date"/>
+                            <p className="Contact-form-label">En qué momento nos podemos comunicar contigo:</p>     
+                            <input type="text" name="" className="Contact-form-input-base Contact-form-input-small" placeholder="Horario (00:00)" value={this.state.time} onChange={this.onValueUpdate} data-title="time"/>
+                            <input type="text" name="" className="Contact-form-input-base Contact-form-input-small" placeholder="Fecha (DD/MM)" value={this.state.date} onChange={this.onValueUpdate} data-title="date"/>
                         </div>
                         <textarea className="Contact-form-input-base Contact-form-input-textarea" name="" id="" placeholder="Mensaje" data-input data-title="mensaje" onChange={this.onValueUpdate} value={this.state.mensaje}></textarea>
                         <div className="Contact-recaptcha">
