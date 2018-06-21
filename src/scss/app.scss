@@ -833,3 +833,22 @@ a {
         max-width: 200px;
     }
 }
+
+.Loading {
+    position: fixed;
+    background: $lightgrey;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100000000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+
+    &--close {
+        transform: translateY(-100vh);
+    }
+}

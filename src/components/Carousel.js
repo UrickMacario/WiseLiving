@@ -9,7 +9,6 @@ import exampleImg3 from '../img/departamentosWiseLiving.jpg';
 import respImg from '../img/test_wl.png';
 import respImg2 from '../img/test_wl2.png';
 import respImg3 from '../img/test_wl3.png';
-import respImg4 from '../img/test_wl4.png';
 
 import Contact from './contact';
 
@@ -80,21 +79,26 @@ export default class MainBanner extends Component {
         this.forceUpdate();
     }
 
+    openSite(){
+        const loading = document.querySelector('.Loading');
+        loading.classList.add('Loading--close');
+    }
+
     render(){
         this.onWindowResize;
         return(
             <div className={this.props.reference} >
                 <Carousel showArrows={false} showStatus={false} showThumbs={false} autoPlay={true} interval={5000} infiniteLoop={true}>
                     <div className="Carousel-single">
-                        <img src={carouselImg} alt=""/>
+                        <img src={carouselImg} alt="" onLoad={this.openSite}/>
                         <p className="legend">Un concepto de vida integral en un espacio vanguardista.</p>
                     </div>
                     <div className="Carousel-single">
-                        <img src={carouselImg2} alt=""/>
+                        <img src={carouselImg2} alt="" />
                         <p className="legend">Un concepto de vida integral en un espacio vanguardista.</p>
                     </div>
                     <div className="Carousel-single">
-                        <img src={carouselImg3} alt=""/>
+                        <img src={carouselImg3} alt="" />
                         <p className="legend">Un concepto de vida integral en un espacio vanguardista.</p>
                     </div>
                 </Carousel>
