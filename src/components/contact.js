@@ -151,17 +151,17 @@ class Contact extends Component {
                 <h2 className="Contact-title">Quiero que me contacte un asesor.</h2>
                 <form className="Contact-form" data-form="contact" onSubmit={this.onSubmitContact} name="WiseContactForm">
                     <div className="Contact-form-right">
-                        <input type="text" className="Contact-form-input-base Contact-form-input-full" placeholder="Nombre completo" data-input data-title="nombre" onChange={this.onValueUpdate} value={this.state.nombre}/>
+                        <input type="text" className="Contact-form-input-base Contact-form-input-full" placeholder="Nombre completo" data-input data-title="nombre" onChange={this.onValueUpdate} value={this.state.nombre} name="fullName"/>
                         <div className="Contact-form-inputGroup">
-                            <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Teléfono" data-input data-title="telefono" onChange={this.onValueUpdate} value={this.state.telefono}/>
-                            <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Mail" data-input data-title="mail" onChange={this.onValueUpdate} value={this.state.mail}/>
+                            <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Teléfono" data-input data-title="telefono" onChange={this.onValueUpdate} value={this.state.telefono} name="phone"/>
+                            <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Mail" data-input data-title="mail" onChange={this.onValueUpdate} value={this.state.mail} name="value" />
                         </div>
                         <div className="Contact-form-inputGroup">
                             <p className="Contact-form-label">En qué momento nos podemos comunicar contigo:</p>     
-                            <input type="text" name="" className="Contact-form-input-base Contact-form-input-small" placeholder="Horario (00:00)" value={this.state.time} onChange={this.onValueUpdate} data-title="time"/>
-                            <input type="text" name="" className="Contact-form-input-base Contact-form-input-small" placeholder="Fecha (DD/MM)" value={this.state.date} onChange={this.onValueUpdate} data-title="date"/>
+                            <input type="text" name="time" className="Contact-form-input-base Contact-form-input-small" placeholder="Horario (00:00)" value={this.state.time} onChange={this.onValueUpdate} data-title="time" />
+                            <input type="text" name="date" className="Contact-form-input-base Contact-form-input-small" placeholder="Fecha (DD/MM)" value={this.state.date} onChange={this.onValueUpdate} data-title="date"/>
                         </div>
-                        <textarea className="Contact-form-input-base Contact-form-input-textarea" name="" id="" placeholder="Mensaje" data-input data-title="mensaje" onChange={this.onValueUpdate} value={this.state.mensaje}></textarea>
+                        <textarea className="Contact-form-input-base Contact-form-input-textarea" name="message" id="" placeholder="Mensaje" data-input data-title="mensaje" onChange={this.onValueUpdate} value={this.state.mensaje}></textarea>
                         <div className="Contact-recaptcha">
                             <ReCAPTCHA sitekey="6Ld6JVQUAAAAAHafmP-RCQwVN0GBiUz36FgblSFb" onChange={this.onRecaptcha}  />
                         </div>
