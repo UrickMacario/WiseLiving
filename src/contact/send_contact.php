@@ -19,18 +19,18 @@ Email: $clientMail<br/>
 Fecha y Hora de contacto: $date - $time<br/>
 Mensaje: $message<br/>
 HTML;
-
-$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+                             // Passing `true` enables exceptions
 try {
+    $mail = new PHPMailer; 
     //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'rog.shadow.federer@gmail.com';                 // SMTP username
     $mail->Password = 'RogFed@2015';                           // SMTP password
-    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 465;                                    // TCP port to connect to
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
     $mail->setFrom($clientMail, $name);
