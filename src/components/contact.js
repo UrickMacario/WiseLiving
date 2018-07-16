@@ -149,7 +149,7 @@ class Contact extends Component {
         return(
             <section className="Contact" data-section="contact">
                 <h2 className="Contact-title">Quiero que me contacte un asesor.</h2>
-                <form className="Contact-form" data-form="contact" onSubmit={this.onSubmitContact}>
+                <form className="Contact-form" data-form="contact" onSubmit={this.onSubmitContact} name="WiseContactForm">
                     <div className="Contact-form-right">
                         <input type="text" className="Contact-form-input-base Contact-form-input-full" placeholder="Nombre completo" data-input data-title="nombre" onChange={this.onValueUpdate} value={this.state.nombre}/>
                         <div className="Contact-form-inputGroup">
