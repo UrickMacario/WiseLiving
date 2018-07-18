@@ -113,6 +113,7 @@ class Contact extends Component {
         const $this = this;
         const json = {
             nombre: this.state.nombre,
+            apellido: this.state.apellido,
             telefono: this.state.telefono,
             mail: this.state.mail,
             mensaje: this.state.mensaje,
@@ -140,11 +141,7 @@ class Contact extends Component {
         if(!this.state.ready){
             document.querySelector('.Contact-form-submit').innerHTML = 'Algunos campos importantes están vacios.';
             return;
-        }
-
-        console.log(json);
-
-        debugger;
+        }        
 
         $.post('/contact/send_contact.php', json, function(res){
             console.log(res);
