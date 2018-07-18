@@ -14,6 +14,7 @@ class Contact extends Component {
 
         this.state = {
             nombre: '',
+            apellido: '',
             telefono: '',
             mail: '',
             mensaje: '',
@@ -34,6 +35,15 @@ class Contact extends Component {
                 document.querySelector('[data-title=nombre]').classList.add('input-error');
             }else{
                 document.querySelector('[data-title=nombre]').classList.remove('input-error');
+            }
+        }
+
+        if(stateKey === 'apellido'){
+            this.setState({ apellido: value });
+            if(!value){
+                document.querySelector('[data-title=apellido]').classList.add('input-error');
+            }else{
+                document.querySelector('[data-title=apellido]').classList.remove('input-error');
             }
         }
 
@@ -132,6 +142,10 @@ class Contact extends Component {
             return;
         }
 
+        console.log(json);
+
+        debugger;
+
         $.post('/contact/send_contact.php', json, function(res){
             console.log(res);
         }).done(function(){
@@ -151,7 +165,10 @@ class Contact extends Component {
                 <h2 className="Contact-title">Quiero que me contacte un asesor.</h2>
                 <form className="Contact-form" data-form="contact" onSubmit={this.onSubmitContact} name="WiseContactForm">
                     <div className="Contact-form-right">
-                        <input type="text" className="Contact-form-input-base Contact-form-input-full" placeholder="Nombre completo" data-input data-title="nombre" onChange={this.onValueUpdate} value={this.state.nombre} name="fullName"/>
+                        <div className="Contact-form-inputGroup">
+                            <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Nombre" data-input data-title="nombre" onChange={this.onValueUpdate} value={this.state.nombre} name="name" />
+                            <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Apellidos" data-input data-title="apellido" onChange={this.onValueUpdate} value={this.state.apellido} name="lastname" />
+                        </div>
                         <div className="Contact-form-inputGroup">
                             <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Teléfono" data-input data-title="telefono" onChange={this.onValueUpdate} value={this.state.telefono} name="phone"/>
                             <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Mail" data-input data-title="mail" onChange={this.onValueUpdate} value={this.state.mail} name="value" />
