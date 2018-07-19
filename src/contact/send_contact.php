@@ -1,7 +1,12 @@
 <?php 
 
+if(!$_POST){
+    die("Get out of here...");
+}
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Mailgun\Mailgun;
 
 require '../vendor/autoload.php';
 
@@ -20,6 +25,20 @@ Email: $clientMail<br/>
 Fecha y Hora de contacto: $date - $time<br/>
 Mensaje: $message<br/>
 HTML;
+
+// # Instantiate the client.
+// $mgClient = new Mailgun('key-81f08a091403cf18112f66a9c6e7d815');
+// $validateAddress = $clientMail;
+
+// # Issue the call to the client.
+// $result = $mgClient->get("address/validate", array('address' => $validateAddress));
+// # is_valid is 0 or 1
+// $isValid = $result->http_response_body->is_valid;
+
+// if(!$isValid){
+//     echo "Email Adress not valid...";
+//     die();
+// }
                              // Passing `true` enables exceptions
 try {
     $mail = new PHPMailer; 
@@ -29,7 +48,7 @@ try {
     $mail->Host = 'smtp.mailgun.org';                     // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'postmaster@mg.wiseliving.com.mx';                 // SMTP username
-    $mail->Password = '0ac435d4134b1c6de8e31e7bb50eb440-8889127d-4ec721b0';                           // SMTP password
+    $mail->Password = 'gH8xwjj-3qE~B6}jpy?jtZeVw2Q3R*';                 // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 
     //Recipients

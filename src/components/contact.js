@@ -21,6 +21,7 @@ class Contact extends Component {
             time: '',
             date: '',
             captcha: false,
+            captchaToken: '',
             ready: false
         };
     }
@@ -150,10 +151,26 @@ class Contact extends Component {
         });
     }
 
-    onRecaptcha(){
-        this.setState({captcha: true});
-
+    onRecaptcha(res){
+        this.setState({
+            captcha: true,
+            captchaToken: res
+        });
+        this.checkCaptchaToken();
         document.querySelector('.Contact-form-submit').removeAttribute('disabled');
+    }
+
+    checkCaptchaToken(){
+        const data = {
+           secret: '6Ld6JVQUAAAAADrRC5O7ed6ghpJl9rXBQA6OYja6',
+           response: this.state.captchaToken 
+        };
+
+        $.post('https://www.google.com/recaptcha/api/siteverify', data, function(res){
+            console.log(res);
+        }).done(function(res){
+            console.log(res);
+        });
     }
 
     render(){
