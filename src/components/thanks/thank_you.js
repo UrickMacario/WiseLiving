@@ -12,8 +12,8 @@ export default class Thanks extends Component {
             <section className="Thanks" style={{backgroundImage:`url('${exampleImg}')`}}>
                 <Navigation />
                 <div className="Thanks-content">
-                    <p className="Thanks-text">Gracias, en breve</p>
-                    <p className="Thanks-text">te contactaremos.</p>
+                    <p className="Thanks-text">¡Gracias por contactarnos!</p>
+                    <p className="Thanks-text">En breve un asesor se pondrá en contacto contigo para ofrecerte una atención personalizada.</p>
                     <Link to="/" className="Button Thanks-back">Regresar</Link>
                 </div>
             </section>

@@ -3,9 +3,10 @@ import { Carousel } from 'react-responsive-carousel';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 
-import exampleImg from '../img/Wise Living Cañada.jpg';
-import exampleImg2 from '../img/Wise Living Juriquilla.jpg';
-import exampleImg3 from '../img/departamentosWiseLiving.jpg';
+import exampleImg from '../img/home/h1-squashed.jpg';
+import exampleImg2 from '../img/home/h2-squashed.jpg';
+import exampleImg3 from '../img/home/h3-squashed.jpg';
+import exampleImg4 from '../img/home/h4-squashed.jpg';
 import respImg from '../img/test_wl.png';
 import respImg2 from '../img/test_wl2.png';
 import respImg3 from '../img/test_wl3.png';
@@ -15,6 +16,7 @@ import Contact from './contact';
 let carouselImg = '';
 let carouselImg2 = '';
 let carouselImg3 = '';
+let carouselImg4 = '';
 
 export default class MainBanner extends Component {
 
@@ -42,6 +44,7 @@ export default class MainBanner extends Component {
             carouselImg = exampleImg;
             carouselImg2 = exampleImg2;
             carouselImg3 = exampleImg3;
+            carouselImg4 = exampleImg4;
         }
     }
 
@@ -74,6 +77,7 @@ export default class MainBanner extends Component {
             carouselImg = exampleImg;
             carouselImg2 = exampleImg2;
             carouselImg3 = exampleImg3;
+            carouselImg4 = exampleImg4;
         }
 
         this.forceUpdate();
@@ -91,15 +95,19 @@ export default class MainBanner extends Component {
                 <Carousel showArrows={false} showStatus={false} showThumbs={false} autoPlay={true} interval={5000} infiniteLoop={true}>
                     <div className="Carousel-single">
                         <img src={carouselImg} alt="" onLoad={this.openSite}/>
-                        <p className="legend">Un concepto de vida integral en un espacio vanguardista.</p>
+                        <p className="legend">Preventa exclusiva Torre B desde 3.5 MDP.</p>
                     </div>
                     <div className="Carousel-single">
                         <img src={carouselImg2} alt="" />
-                        <p className="legend">Un concepto de vida integral en un espacio vanguardista.</p>
+                        <p className="legend">Amplios departamentos de 2, 3 y 4 recámaras en Juriquilla.</p>
                     </div>
                     <div className="Carousel-single">
                         <img src={carouselImg3} alt="" />
-                        <p className="legend">Un concepto de vida integral en un espacio vanguardista.</p>
+                        <p className="legend">Preventa exclusiva Torre B desde 3.5 MDP.</p>
+                    </div>
+                    <div className="Carousel-single">
+                        <img src={carouselImg4} alt="" />
+                        <p className="legend">Amplios departamentos de 2, 3 y 4 recámaras en Juriquilla.</p>
                     </div>
                 </Carousel>
                 <Contact />

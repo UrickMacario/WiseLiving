@@ -19,7 +19,7 @@ export default class Apartments extends Component {
         return(
             <section className="Apartments" data-section="apartments">
                 <h2 className="Apartments-title">
-                    <span className="Apartments-title-highlight">Departamentos</span><span className="Apartments-title-normal">Wise Living cuenta con dos tipos de departamentos en venta:</span>
+                    <span className="Apartments-title-highlight">Departamentos</span><span className="Apartments-title-normal">La Torre A de Wise Living Cañada cuenta con dos tipos de departamentos disponibles para venta:</span>
                 </h2>
                 <div className="Apartments-single">
                     <ul className="Apartments-single-details">

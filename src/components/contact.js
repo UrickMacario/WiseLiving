@@ -177,7 +177,7 @@ class Contact extends Component {
         return(
             <section className="Contact" data-section="contact">
                 <h2 className="Contact-title">Quiero que me contacte un asesor.</h2>
-                <form className="Contact-form" data-form="contact" onSubmit={this.onSubmitContact} name="WiseContactForm">
+                <form className="Contact-form" data-form="contact" onSubmit={this.onSubmitContact} name="WiseContactForm" id="WiseContactForm">
                     <div className="Contact-form-right">
                         <div className="Contact-form-inputGroup">
                             <input type="text" className="Contact-form-input-base Contact-form-input-small" placeholder="Nombre" data-input data-title="nombre" onChange={this.onValueUpdate} value={this.state.nombre} name="name" />
@@ -199,6 +199,12 @@ class Contact extends Component {
                         <button className="Button Contact-form-submit" data-submit disabled>Enviar</button>
                     </div>
                 </form>
+                {/* <!-- Sharpspring FORM --> */}
+                <script type="text/javascript">
+                    var __ss_noform = __ss_noform || [];
+                    __ss_noform.push([&#39;baseURI&#39;, &#39;https://app-3QNEHS256W.marketingautomation.services/webforms/receivePostback/MzawMDEzNze3AAA/&#39;]);
+                    __ss_noform.push([&#39;form&#39;, &#39;WiseContactForm&#39;, &#39;WiseContactForm&#39;, &#39;f56dc0df-77d9-4235-8a74-8bdea5ff8f67&#39;]);
+                </script>
             </section>
         );
     }
