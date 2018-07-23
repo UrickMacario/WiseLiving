@@ -3,15 +3,15 @@ import { Carousel } from 'react-responsive-carousel';
 
 import twoRoomsImg from '../img/departamento_de_2_recamaras.png';
 import threeRoomsImg from '../img/departamento_de_3_recamaras.png';
-import exampleImg from '../img/departamento_2recamaras_galeria.jpg';
-import exampleImg2 from '../img/departamento_2recamaras_galeria2.jpg';
-import exampleImg3 from '../img/departamento_2recamaras_galeria3.jpg';
-import exampleImg4 from '../img/departamento_2recamaras_galeria4.jpg';
-import exampleImg5 from '../img/departamento_3recamaras_galeria1.jpg';
-import exampleImg6 from '../img/departamento_3recamaras_galeria2.jpg';
-import exampleImg7 from '../img/departamento_3recamaras_galeria3.jpg';
-import exampleImg8 from '../img/departamento_3recamaras_galeria4.jpg';
-import exampleImg9 from '../img/departamento_3recamaras_galeria5.jpg';
+import exampleImg from '../img/2rooms/departamento_2recamaras_galeria2_643e4d6c04ea0fc81a5f35dc0e7c82ac-squashed.jpg';
+import exampleImg2 from '../img/2rooms/departamento_2recamaras_galeria3_2c371c5fa956316916e53ef0c6284171-squashed.jpg';
+import exampleImg3 from '../img/2rooms/departamento_2recamaras_galeria4_fe5c1b9581e585f29d91a794fb8b8dc9-squashed.jpg';
+import exampleImg4 from '../img/2rooms/departamento_2recamaras_galeria_e14ea61082111b6e15b7cbd5ae9c7303-squashed.jpg';
+import exampleImg5 from '../img/3rooms/departamento_3recamaras_galeria1_dbe816d7b14c91f23c3c50113434df42-squashed.jpg';
+import exampleImg6 from '../img/3rooms/departamento_3recamaras_galeria2_53c859d799b5a651e606c6be509d522d-squashed.jpg';
+import exampleImg7 from '../img/3rooms/departamento_3recamaras_galeria3_055e5d9f8d7cca4ef371168db7c623b2-squashed.jpg';
+import exampleImg8 from '../img/3rooms/departamento_3recamaras_galeria4_81afbb133b4b528baeda1a76e16c47df-squashed.jpg';
+import exampleImg9 from '../img/3rooms/departamento_3recamaras_galeria5_2514a83f4e3aa5c159d3212831245dda-squashed.jpg';
 
 
 export default class Apartments extends Component {

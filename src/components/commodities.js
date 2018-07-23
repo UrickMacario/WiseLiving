@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import { Carousel } from 'react-responsive-carousel';
 
-import exampleImg from '../img/amenidades2.jpg';
-import exampleImg2 from '../img/amenidades1.jpg';
-import exampleImg3 from '../img/amenidades3.jpg';
+import exampleImg from '../img/amenities/amenidades1-squashed.jpg';
+import exampleImg2 from '../img/amenities/amenidades2-squashed.jpg';
+import exampleImg3 from '../img/amenities/amenidades3-squashed.jpg';
+import exampleImg4 from '../img/amenities/amenidades4-squashed.jpg';
+import exampleImg5 from '../img/amenities/amenidades5-squashed.jpg';
 
 export default class Ammenities extends Component {
     render(){
@@ -31,6 +33,12 @@ export default class Ammenities extends Component {
                         </div>
                         <div className="Carousel-single">
                             <img src={exampleImg3} alt=""/>
+                        </div>
+                        <div className="Carousel-single">
+                            <img src={exampleImg4} alt=""/>
+                        </div>
+                        <div className="Carousel-single">
+                            <img src={exampleImg5} alt=""/>
                         </div>
                     </Carousel>
                 </div>

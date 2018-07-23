@@ -221,7 +221,7 @@ a {
         font-size: 3.2rem;
         font-weight: 300;
         text-align: center;
-        padding-bottom: 8vh;
+        padding-bottom: 4vh;
         color: $mianText;
 
         @media screen and (max-width: 1024px){
@@ -307,7 +307,7 @@ a {
             &-base {
                 width: 100%;
                 font-size: 1.4rem;
-                padding: 2vh 2vw;
+                padding: 1.5vh 2vw;
                 border: 1px solid $grey;
                 background: transparent;
                 font-family: 'Ubuntu', sans-serif;
@@ -343,7 +343,7 @@ a {
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            margin: 3vh 0;
+            margin: 2vh 0;
 
             @media screen and(max-width: 425px){
                 margin-bottom: 0;
@@ -352,6 +352,7 @@ a {
 
         &-submit {
             width: 100%;
+            height: 50px;
 
             &:disabled {
                 background: #ccc;
