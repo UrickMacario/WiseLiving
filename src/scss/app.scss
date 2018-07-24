@@ -409,20 +409,17 @@ a {
             letter-spacing: 2px;
             text-align: center;
             display: block;
-            padding: 2vh 0;
+            padding: 2vh 5vw 2vh 20vw;
             color: $mianText;
 
-            @media screen and(max-width: 1080px){
+            @media screen and(max-width: 1200px){
                 text-align: right;
-                padding-right: 5vh;
+                padding-left: 25vw;
             }
 
-            @media screen and(max-width: 1024px){
+            @media screen and(max-width: 1080px){
                 text-align: center;
-            }
-
-            @media screen and(max-width: 425px){
-                padding-right: 0;
+                padding: 2vh 5vw;
             }
         }
     }
